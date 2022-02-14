@@ -1,4 +1,5 @@
 # Note Taker Starter Code
+
 The aim of this project was
 
 ## Table of Contents
