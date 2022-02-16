@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { notesArray } = require('../../db/db');
-const { createNewNote, updateDB } = require("../../lib/notes");
+const { createNewNote } = require("../../lib/notes");
 
 router.get("/notes", (req, res) => {
     res.json(notesArray);
@@ -13,13 +13,13 @@ router.post("/notes", (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
-    let newNotesArray = notesArray.filter(
-        (note) => { return note.id != req.params.id; }
-    );
-    //console.log(newNotesArray);
-    updateDB(newNotesArray);
+    // let newNotesArray = notesArray.filter(
+    //     (note) => { return note.id != req.params.id; }
+    // );
+    // //console.log(newNotesArray);
+    // res.json(newNotesArray);
 
-    res.send();
+    res.json(notesArray.filter(note => note.id !== parseInt(req.params.id)));
 })
 
 module.exports = router;
