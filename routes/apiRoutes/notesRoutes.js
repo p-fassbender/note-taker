@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { notesArray } = require('../../db/db');
-const { createNewNote } = require("../../lib/notes");
+const { createNewNote, updateDB } = require("../../lib/notes");
 
 router.get("/notes", (req, res) => {
     res.json(notesArray);
@@ -18,8 +18,19 @@ router.delete('/notes/:id', (req, res) => {
     // );
     // //console.log(newNotesArray);
     // res.json(newNotesArray);
-
-    res.json(notesArray.filter(note => note.id !== parseInt(req.params.id)));
+    
+    // res.json(notesArray.filter(note => note.id != req.params.id));
+    // returns an updated array with the "deleted" note id filtered out
+    // however this doesn't do anything when I click the delete button
+    // am I supposed to writeFile again?
+    let newArray = [];
+    newArray = notesArray.filter(note => note.id != req.params.id)
+    updateDB(newArray);
+    console.log("notesRoutes: " + newArray)
+    res.json(newArray);
+    
+    // this updates the db file to have a new array with the deleted note gone
+    // it doesn't adjust the page to show the note is gone
 })
 
 module.exports = router;
