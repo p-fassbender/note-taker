@@ -1,6 +1,6 @@
 # Note Taker Starter Code
 
-The aim of this project was
+The aim of this project was to write and save notes in order to organize my thoughts and keep track of tasks I need to complete.
 
 ## Table of Contents
 [Technologies Used](#technologies-used) <br>
@@ -11,11 +11,11 @@ The aim of this project was
 [Questions](#questions) <br>
 
 ## Technologies Used
-* Node.js
+* Express.js
 * JavaScript
 * HTML
 
-with a focus on OOP, npm Inquirer, and TDD
+with a focus on routing
 
 ---
 
@@ -25,22 +25,26 @@ Navigate to the root directory in the terminal and initialize the project with *
 ---
 
 ## Use
-Navigate to the root directory in the terminal and type **node index.js** to run the project
+Navigate to the root directory in the terminal and type **node server.js** to run the project.
+Then go to http://localhost:3001/ in your browser
 
 ---
 
 ## Tests
-Navigate to the root directory in the terminal and type **npm run test** to run the project
+There are no official tests for this project
 
 ---
 
 ## Media
 insert video link here
 
-![Screenshot](./assets/note-taker-screenshot.png)
+insert screenshot here
 
 The following link is to this project's github repository
 https://github.com/p-fassbender/note-taker
+
+The following link is to this project's live website
+
 
 ---
 
