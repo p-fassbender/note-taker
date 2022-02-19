@@ -15,7 +15,7 @@ The aim of this project was to write and save notes in order to organize my thou
 * JavaScript
 * HTML
 
-with a focus on routing
+with a focus on routing and Heroku
 
 ---
 
@@ -36,15 +36,13 @@ There are no official tests for this project
 ---
 
 ## Media
-insert video link here
-
-insert screenshot here
+![webpage screenshot](./assets/note-taker-screenshot.png)
 
 The following link is to this project's github repository
 https://github.com/p-fassbender/note-taker
 
 The following link is to this project's live website
-
+https://mysterious-stream-53443.herokuapp.com/
 
 ---
 
